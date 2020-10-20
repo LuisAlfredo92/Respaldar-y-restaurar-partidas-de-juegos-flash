@@ -57,8 +57,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Information.en.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Information.resx">
       <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main window.en.resx">
+      <DependentUpon>Main window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main window.resx">
       <DependentUpon>Main window.cs</DependentUpon>

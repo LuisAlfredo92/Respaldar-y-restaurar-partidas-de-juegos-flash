@@ -34,5 +34,17 @@ namespace Respaldar_y_restaurar_partidas_de_juegos_flash.Properties {
                 this["new_path"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("es")]
+        public string lang {
+            get {
+                return ((string)(this["lang"]));
+            }
+            set {
+                this["lang"] = value;
+            }
+        }
     }
 }

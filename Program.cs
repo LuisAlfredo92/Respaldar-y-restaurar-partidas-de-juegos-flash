@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace Respaldar_y_restaurar_partidas_de_juegos_flash
@@ -12,6 +13,9 @@ namespace Respaldar_y_restaurar_partidas_de_juegos_flash
         [STAThread]
         static void Main()
         {
+            CultureInfo cultureInfo = new CultureInfo(Properties.Settings.Default.lang);
+            System.Threading.Thread.CurrentThread.CurrentUICulture = cultureInfo;
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
