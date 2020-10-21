@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
 [assembly: AssemblyTitle("Respaldar y restaurar partidas de juegos flash")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Un sencillo programa para crear respaldos y restaurar tus partidas de juegos flash")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("LuisAlfredo92")]
 [assembly: AssemblyProduct("Respaldar y restaurar partidas de juegos flash")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
