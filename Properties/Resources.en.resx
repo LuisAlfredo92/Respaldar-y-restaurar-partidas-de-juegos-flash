@@ -122,10 +122,10 @@
     <value>..\Resources\Banner.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DirectoryNotFound" xml:space="preserve">
-    <value>Hubo un error y no se encontró la carpeta</value>
+    <value>There was an error and the folder wasn't found</value>
   </data>
   <data name="EmptyRoute" xml:space="preserve">
-    <value>Ruta de acceso vacía</value>
+    <value>Empty route</value>
   </data>
   <data name="Error" xml:space="preserve">
     <value>Error</value>
@@ -134,7 +134,7 @@
     <value>..\Resources\Folder.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GeneralError" xml:space="preserve">
-    <value>Ha habido un error durante la operación, por favor, intenta nuevamente</value>
+    <value>There was an error doing the operation, please, try again</value>
   </data>
   <data name="Information" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Information.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -146,27 +146,27 @@
     <value>..\Resources\LuisAlfredo92 (pequeño).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NoSavedFiles" xml:space="preserve">
-    <value>No existe una carpeta con partidas guardadas</value>
+    <value>A folder with saved games doesn't exist</value>
   </data>
   <data name="NoSavedFilesTitle" xml:space="preserve">
-    <value>No hay partidas guardadas</value>
+    <value>There's no saved games</value>
   </data>
   <data name="PathTooLong" xml:space="preserve">
-    <value>La ruta indicada es demasiado larga, por favor, selecciona otra carpeta</value>
+    <value>Path too long, please, select another folder</value>
   </data>
   <data name="PleaseRestart" xml:space="preserve">
-    <value>Para aplicar los cambios tienes que reiniciar el programa</value>
+    <value>To apply the changes you have to restart the program</value>
   </data>
   <data name="PleaseRestartTitle" xml:space="preserve">
-    <value>Por favor reinicie</value>
+    <value>Please restart</value>
   </data>
   <data name="RestartNow" xml:space="preserve">
-    <value>¿Reiniciar ahora?</value>
+    <value>Restart now?</value>
   </data>
   <data name="SelectARoute" xml:space="preserve">
-    <value>Selecciona una ruta primero</value>
+    <value>First select a route</value>
   </data>
   <data name="UnauthorizedAccess" xml:space="preserve">
-    <value>No tienes acceso a la carpeta indicada</value>
+    <value>You don't have access to the indicated folder</value>
   </data>
 </root>

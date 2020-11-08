@@ -37,7 +37,7 @@ namespace Respaldar_y_restaurar_partidas_de_juegos_flash
         // new one in the specified route
         private void copy_files(string path, string new_path)
         {
-            if (!this.new_path.Equals(null))
+            if (!(this.new_path.Length == 0))
             {
                 if (Directory.Exists(path + "\\Flash Player"))
                 {
@@ -65,31 +65,31 @@ namespace Respaldar_y_restaurar_partidas_de_juegos_flash
                     }
                     catch (UnauthorizedAccessException e)
                     {
-                        MessageBox.Show("No tienes acceso a la carpeta indicada\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(Properties.Resources.UnauthorizedAccess + "\n" + e.Message, Properties.Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         throw;
                     }
                     catch (PathTooLongException e)
                     {
-                        MessageBox.Show("La ruta indicada es demasiado larga, por favor, selecciona otra carpeta\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(Properties.Resources.PathTooLong + "\n" + e.Message, Properties.Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         throw;
                     }
                     catch (DirectoryNotFoundException e)
                     {
-                        MessageBox.Show("Hubo un error y no se encontró la carpeta\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(Properties.Resources.DirectoryNotFound + "\n" + e.Message, Properties.Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         throw;
                     }
                     catch (IOException e)
                     {
-                        MessageBox.Show("Ha habido un error durante la operación, por favor, intenta nuevamente\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(Properties.Resources.GeneralError + "\n" + e.Message, Properties.Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         throw;
                     }
 
                 }
                 else
-                    MessageBox.Show("No existe una carpeta con partidas guardadas", "No hay partidas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(Properties.Resources.NoSavedFiles, Properties.Resources.NoSavedFilesTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
-                MessageBox.Show("Selecciona una ruta primero", "Ruta de acceso vacía", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Properties.Resources.SelectARoute, Properties.Resources.EmptyRoute, MessageBoxButtons.OK, MessageBoxIcon.Error);
             
         }
 

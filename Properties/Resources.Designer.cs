@@ -71,12 +71,48 @@ namespace Respaldar_y_restaurar_partidas_de_juegos_flash.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Hubo un error y no se encontró la carpeta.
+        /// </summary>
+        internal static string DirectoryNotFound {
+            get {
+                return ResourceManager.GetString("DirectoryNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ruta de acceso vacía.
+        /// </summary>
+        internal static string EmptyRoute {
+            get {
+                return ResourceManager.GetString("EmptyRoute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Error.
+        /// </summary>
+        internal static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Folder {
             get {
                 object obj = ResourceManager.GetObject("Folder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ha habido un error durante la operación, por favor, intenta nuevamente.
+        /// </summary>
+        internal static string GeneralError {
+            get {
+                return ResourceManager.GetString("GeneralError", resourceCulture);
             }
         }
         
@@ -107,6 +143,78 @@ namespace Respaldar_y_restaurar_partidas_de_juegos_flash.Properties {
             get {
                 object obj = ResourceManager.GetObject("LuisAlfredo92__pequeño_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No existe una carpeta con partidas guardadas.
+        /// </summary>
+        internal static string NoSavedFiles {
+            get {
+                return ResourceManager.GetString("NoSavedFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No hay partidas guardadas.
+        /// </summary>
+        internal static string NoSavedFilesTitle {
+            get {
+                return ResourceManager.GetString("NoSavedFilesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La ruta indicada es demasiado larga, por favor, selecciona otra carpeta.
+        /// </summary>
+        internal static string PathTooLong {
+            get {
+                return ResourceManager.GetString("PathTooLong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Para aplicar los cambios tienes que reiniciar el programa.
+        /// </summary>
+        internal static string PleaseRestart {
+            get {
+                return ResourceManager.GetString("PleaseRestart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Por favor reinicie.
+        /// </summary>
+        internal static string PleaseRestartTitle {
+            get {
+                return ResourceManager.GetString("PleaseRestartTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ¿Reiniciar ahora?.
+        /// </summary>
+        internal static string RestartNow {
+            get {
+                return ResourceManager.GetString("RestartNow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Selecciona una ruta primero.
+        /// </summary>
+        internal static string SelectARoute {
+            get {
+                return ResourceManager.GetString("SelectARoute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No tienes acceso a la carpeta indicada.
+        /// </summary>
+        internal static string UnauthorizedAccess {
+            get {
+                return ResourceManager.GetString("UnauthorizedAccess", resourceCulture);
             }
         }
     }

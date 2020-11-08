@@ -34,7 +34,7 @@ namespace Respaldar_y_restaurar_partidas_de_juegos_flash
             Properties.Settings.Default.lang = lang;
             Properties.Settings.Default.Save();
             if (!System.Threading.Thread.CurrentThread.CurrentUICulture.Name.StartsWith(lang))
-                if (MessageBox.Show("To apply changes you have to restart the program\nRestart now?", "Please restart", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show(Properties.Resources.PleaseRestart + "\n" + Properties.Resources.RestartNow, Properties.Resources.PleaseRestartTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     Application.Restart();
 
         }
