@@ -37,55 +37,60 @@ namespace Respaldar_y_restaurar_partidas_de_juegos_flash
         // new one in the specified route
         private void copy_files(string path, string new_path)
         {
-            if (Directory.Exists(path + "\\Flash Player"))
+            if (!this.new_path.Equals(null))
             {
-                ArrayList directories = new ArrayList();
-                directories.Add(path + "\\Flash Player");
+                if (Directory.Exists(path + "\\Flash Player"))
+                {
+                    ArrayList directories = new ArrayList();
+                    directories.Add(path + "\\Flash Player");
 
-                for (int i = 0; i < directories.Count; i++)
-                    directories.AddRange(Directory.GetDirectories(directories[i].ToString()));
-                try
-                {
-                    if (!combine_checkBox.Checked && Directory.Exists(new_path + "\\Flash Player"))
+                    for (int i = 0; i < directories.Count; i++)
+                        directories.AddRange(Directory.GetDirectories(directories[i].ToString()));
+                    try
                     {
-                        Directory.Delete(new_path + "\\Flash Player", true);
-                        Directory.CreateDirectory(new_path + "\\Flash Player");
+                        if (!combine_checkBox.Checked && Directory.Exists(new_path + "\\Flash Player"))
+                        {
+                            Directory.Delete(new_path + "\\Flash Player", true);
+                            Directory.CreateDirectory(new_path + "\\Flash Player");
+                        }
+                        else if (!Directory.Exists(new_path + "\\Flash Player"))
+                            Directory.CreateDirectory(new_path + "\\Flash Player");
+                        foreach (string folder in directories)
+                        {
+                            Directory.CreateDirectory(folder.Replace(path, new_path));
+                            foreach (string file in Directory.GetFiles(folder))
+                                if (!(File.Exists(file.Replace(path, new_path)) && !overwrite_chechBox.Checked))
+                                    File.Copy(file, file.Replace(path, new_path), true);
+                        }
                     }
-                    else if (!Directory.Exists(new_path + "\\Flash Player"))
-                        Directory.CreateDirectory(new_path + "\\Flash Player");
-                    foreach (string folder in directories)
+                    catch (UnauthorizedAccessException e)
                     {
-                        Directory.CreateDirectory(folder.Replace(path, new_path));
-                        foreach (string file in Directory.GetFiles(folder))
-                            if (!(File.Exists(file.Replace(path, new_path)) && !overwrite_chechBox.Checked))
-                                File.Copy(file, file.Replace(path, new_path), true);
+                        MessageBox.Show("No tienes acceso a la carpeta indicada\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        throw;
                     }
-                }
-                catch (UnauthorizedAccessException e)
-                {
-                    MessageBox.Show("No tienes acceso a la carpeta indicada\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    throw;
-                }
-                catch (PathTooLongException e)
-                {
-                    MessageBox.Show("La ruta indicada es demasiado larga, por favor, selecciona otra carpeta\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    throw;
-                }
-                catch (DirectoryNotFoundException e)
-                {
-                    MessageBox.Show("Hubo un error y no se encontró la carpeta\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    throw;
-                }
-                catch (IOException e)
-                {
-                    MessageBox.Show("Ha habido un error durante la operación, por favor, intenta nuevamente\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    throw;
-                }
+                    catch (PathTooLongException e)
+                    {
+                        MessageBox.Show("La ruta indicada es demasiado larga, por favor, selecciona otra carpeta\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        throw;
+                    }
+                    catch (DirectoryNotFoundException e)
+                    {
+                        MessageBox.Show("Hubo un error y no se encontró la carpeta\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        throw;
+                    }
+                    catch (IOException e)
+                    {
+                        MessageBox.Show("Ha habido un error durante la operación, por favor, intenta nuevamente\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        throw;
+                    }
 
-            } else
-            {
-                MessageBox.Show("No existe una carpeta con partidas guardadas", "No hay partidas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                    MessageBox.Show("No existe una carpeta con partidas guardadas", "No hay partidas", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+                MessageBox.Show("Selecciona una ruta primero", "Ruta de acceso vacía", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
         }
 
         private void examin_btn_Click(object sender, EventArgs e)
