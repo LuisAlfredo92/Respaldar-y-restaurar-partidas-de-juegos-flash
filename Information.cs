@@ -48,5 +48,10 @@ namespace Respaldar_y_restaurar_partidas_de_juegos_flash
         {
             System.Diagnostics.Process.Start("https://github.com/LuisAlfredo92/Respaldar-y-restaurar-partidas-de-juegos-flash");
         }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://youtu.be/2AaMD7HFx0k?t=84");
+        }
     }
 }

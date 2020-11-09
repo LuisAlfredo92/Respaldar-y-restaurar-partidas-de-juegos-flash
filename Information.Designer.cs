@@ -35,24 +35,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Image = global::Respaldar_y_restaurar_partidas_de_juegos_flash.Properties.Resources.LuisAlfredo92__pequeño_;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
             // lang_comboBox
             // 
-            resources.ApplyResources(this.lang_comboBox, "lang_comboBox");
             this.lang_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lang_comboBox.FormattingEnabled = true;
             this.lang_comboBox.Items.AddRange(new object[] {
             resources.GetString("lang_comboBox.Items"),
             resources.GetString("lang_comboBox.Items1")});
+            resources.ApplyResources(this.lang_comboBox, "lang_comboBox");
             this.lang_comboBox.Name = "lang_comboBox";
             this.lang_comboBox.SelectedIndexChanged += new System.EventHandler(this.lang_comboBox_SelectedIndexChanged);
             // 
@@ -81,10 +82,19 @@
             this.linkLabel2.TabStop = true;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
+            // linkLabel3
+            // 
+            resources.ApplyResources(this.linkLabel3, "linkLabel3");
+            this.linkLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
             // Information
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
@@ -109,5 +119,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel3;
     }
 }
